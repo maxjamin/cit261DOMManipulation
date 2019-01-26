@@ -18,6 +18,25 @@ function addBook() {
 }
 
 
+function addToFront() {
+
+	var input = document.getElementById("bookName").value;
+
+	var checkList= document.getElementById("books");
+
+	if(input != "")
+	{
+
+		var node = document.createElement("LI");
+		var text = document.createTextNode(input);
+		node.appendChild(text);
+		node.id = input;
+
+		checkList.insertBefore(node, checkList.childNodes[0]);
+	}
+	console.log(checkList.innerHTML);
+}
+
 
 function removeBook()
 {
